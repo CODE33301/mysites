@@ -1,1 +1,118 @@
-
+[
+    {
+        "topic": "SYSTEM ARCHITECTURE",
+        "subtopics": [
+            {
+                "question": "Q",
+                "a": "aaa",
+                "b": "bbb",
+                "c": "ccc",
+                "d": "ddd",
+                "correct": "b"
+            },
+            {
+                "question": "Q",
+                "a": "aaa",
+                "b": "bbb",
+                "c": "ccc",
+                "d": "ddd",
+                "correct": "c"
+            },
+            {
+                "question": "Q",
+                "a": "aaa",
+                "b": "bbb",
+                "c": "ccc",
+                "d": "ddd",
+                "correct": "c"
+            }
+        ]
+    },
+    {
+        "topic": "LINUX INSTALLATION AND PACKAGE MANAGEMENT",
+        "subtopics": [
+            {
+                "question": "Q",
+                "a": "aaa",
+                "b": "bbb",
+                "c": "ccc",
+                "d": "ddd",
+                "correct": "a"
+            },
+            {
+                "question": "Q",
+                "a": "To store data in a structured format.",
+                "b": "To analyze data using statistical methods.",
+                "c": "To represent data graphically to identify patterns and insights.",
+                "d": "To clean and preprocess data.",
+                "correct": "c"
+            },
+            {
+                "question": "Q",
+                "a": "aaa",
+                "b": "bbb",
+                "c": "ccc",
+                "d": "ddd",
+                "correct": "b"
+            }
+        ]
+    },
+    {
+        "topic": "GNU AND UNIX COMMANDS",
+        "subtopics": [
+            {
+                "question": "Q",
+                "a": "aaa",
+                "b": "bbb",
+                "c": "ccc",
+                "d": "ddd",
+                "correct": "b"
+            },
+            {
+                "question": "Q",
+                "a": "aaa",
+                "b": "bbb",
+                "c": "ccc",
+                "d": "ddd",
+                "correct": "a"
+            },
+            {
+                "question": "Q",
+                "a": "aaa",
+                "b": "bbb",
+                "c": "ccc",
+                "d": "ddd",
+                "correct": "b"
+            }
+        ]
+    },
+    {
+        "topic": "DEVICES, LINUX FILESYSTEMS, FILESYSTEM HIERARCHY STANDARD",
+        "subtopics": [
+            {
+                "question": "Q",
+                "a": "aaa",
+                "b": "bbb",
+                "c": "ccc",
+                "d": "ddd",
+                "correct": "b"
+            },
+            {
+                "question": "Q",
+                "a": "aaa",
+                "b": "bbb",
+                "c": "ccc",
+                "d": "ddd",
+                "correct": "a"
+            },
+            {
+                "question": "Q",
+                "a": "aaa",
+                "b": "bbb",
+                "c": "ccc",
+                "d": "ddd",
+                "correct": "b"
+            }
+        ]
+    }
+]
