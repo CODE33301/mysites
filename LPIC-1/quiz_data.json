@@ -1,26 +1,89 @@
 [
     {
-        "question": "What is the capital of France?",
-        "a": "Berlin",
-        "b": "Madrid",
-        "c": "Paris",
-        "d": "Lisbon",
-        "correct": "c"
+        "topic": "Web Development",
+        "subtopics": [
+            {
+                "question": "What is HTML and what role does it play in web development?",
+                "a": "HTML is a programming language used for server-side scripting.",
+                "b": "HTML is a markup language used to structure content on the web.",
+                "c": "HTML is a database management system.",
+                "d": "HTML is a style sheet language for designing web pages.",
+                "correct": "b"
+            },
+            {
+                "question": "What is CSS and how does it enhance the appearance of a website?",
+                "a": "CSS is used to create dynamic web applications.",
+                "b": "CSS is a markup language for structuring web content.",
+                "c": "CSS is a style sheet language used to describe the presentation of a document written in HTML.",
+                "d": "CSS is a programming language for backend development.",
+                "correct": "c"
+            },
+            {
+                "question": "What is JavaScript and what is its primary use in web development?",
+                "a": "JavaScript is used for styling web pages.",
+                "b": "JavaScript is a server-side language for database management.",
+                "c": "JavaScript is a programming language used to create interactive effects within web browsers.",
+                "d": "JavaScript is a markup language for structuring web content.",
+                "correct": "c"
+            }
+        ]
     },
     {
-        "question": "Which planet is known as the Red Planet?",
-        "a": "Earth",
-        "b": "Mars",
-        "c": "Jupiter",
-        "d": "Saturn",
-        "correct": "b"
+        "topic": "Data Science",
+        "subtopics": [
+            {
+                "question": "What is data cleaning and why is it important in data science?",
+                "a": "Data cleaning is the process of removing duplicates and irrelevant data to improve data quality.",
+                "b": "Data cleaning is the process of visualizing data.",
+                "c": "Data cleaning is the process of collecting data from various sources.",
+                "d": "Data cleaning is the process of storing data in databases.",
+                "correct": "a"
+            },
+            {
+                "question": "What is the purpose of data visualization in data science?",
+                "a": "To store data in a structured format.",
+                "b": "To analyze data using statistical methods.",
+                "c": "To represent data graphically to identify patterns and insights.",
+                "d": "To clean and preprocess data.",
+                "correct": "c"
+            },
+            {
+                "question": "What is machine learning and how is it used in data science?",
+                "a": "Machine learning is a method of data storage.",
+                "b": "Machine learning is a technique that allows computers to learn from data and make predictions.",
+                "c": "Machine learning is a way to visualize data.",
+                "d": "Machine learning is a programming language for data analysis.",
+                "correct": "b"
+            }
+        ]
     },
     {
-        "question": "What is the largest ocean on Earth?",
-        "a": "Atlantic Ocean",
-        "b": "Indian Ocean",
-        "c": "Arctic Ocean",
-        "d": "Pacific Ocean",
-        "correct": "d"
+        "topic": "Cloud Computing",
+        "subtopics": [
+            {
+                "question": "What is cloud computing and what are its main benefits?",
+                "a": "Cloud computing is a method of storing data on local servers.",
+                "b": "Cloud computing is the delivery of computing services over the internet, offering scalability and flexibility.",
+                "c": "Cloud computing is a type of software development.",
+                "d": "Cloud computing is a hardware-based solution for data storage.",
+                "correct": "b"
+            },
+            {
+                "question": "What are the different types of cloud service models?",
+                "a": "IaaS, PaaS, and SaaS.",
+                "b": "HTML, CSS, and JavaScript.",
+                "c": "Data mining, data analysis, and data visualization.",
+                "d": "Local, hybrid, and public.",
+                "correct": "a"
+            },
+            {
+                "question": "What is the difference between public and private clouds?",
+                "a": "Public clouds are owned by a single organization, while private clouds are shared among multiple organizations.",
+                "b": "Public clouds are accessible to anyone over the internet, while private clouds are restricted to a single organization.",
+                "c": "Public clouds are more secure than private clouds.",
+                "d": "Public clouds require on-premises hardware, while private clouds do not.",
+                "correct": "b"
+            }
+        ]
     }
 ]
