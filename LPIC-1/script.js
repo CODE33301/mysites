@@ -1,36 +1,19 @@
-const quizData = [
-    {
-        question: "What is the capital of France?",
-        a: "Berlin",
-        b: "Madrid",
-        c: "Paris",
-        d: "Lisbon",
-        correct: "c",
-    },
-    {
-        question: "Which planet is known as the Red Planet?",
-        a: "Earth",
-        b: "Mars",
-        c: "Jupiter",
-        d: "Saturn",
-        correct: "b",
-    },
-    {
-        question: "What is the largest ocean on Earth?",
-        a: "Atlantic Ocean",
-        b: "Indian Ocean",
-        c: "Arctic Ocean",
-        d: "Pacific Ocean",
-        correct: "d",
-    },
-];
-
 const quiz = document.getElementById("quiz");
 const submitButton = document.getElementById("submit");
 const result = document.getElementById("result");
 
 let currentQuestionIndex = 0;
 let score = 0;
+let quizData = [];
+
+// Load quiz data from JSON file
+fetch('quiz_data.json')
+    .then(response => response.json())
+    .then(data => {
+        quizData = data;
+        loadQuiz();
+    })
+    .catch(error => console.error('Error loading quiz data:', error));
 
 function loadQuiz() {
     const currentQuestion = quizData[currentQuestionIndex];
@@ -71,6 +54,3 @@ submitButton.addEventListener("click", () => {
         alert("Please select an answer!");
     }
 });
-
-// Load the first question
-loadQuiz();

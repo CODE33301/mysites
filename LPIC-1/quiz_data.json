@@ -1,0 +1,26 @@
+[
+    {
+        "question": "What is the capital of France?",
+        "a": "Berlin",
+        "b": "Madrid",
+        "c": "Paris",
+        "d": "Lisbon",
+        "correct": "c"
+    },
+    {
+        "question": "Which planet is known as the Red Planet?",
+        "a": "Earth",
+        "b": "Mars",
+        "c": "Jupiter",
+        "d": "Saturn",
+        "correct": "b"
+    },
+    {
+        "question": "What is the largest ocean on Earth?",
+        "a": "Atlantic Ocean",
+        "b": "Indian Ocean",
+        "c": "Arctic Ocean",
+        "d": "Pacific Ocean",
+        "correct": "d"
+    }
+]
