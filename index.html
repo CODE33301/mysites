@@ -3,25 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>Pop Purple Table</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-            text-align: center;
-            padding: 50px;
+            background-color: #f0e5ff; /* Light purple background */
         }
-        h1 {
-            color: #2c3e50;
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        p {
-            font-size: 18px;
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid #9b59b6; /* Darker purple border */
+        }
+        th {
+            background-color: #8e44ad; /* Purple header */
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #d7bde2; /* Light purple for even rows */
+        }
+        tr:hover {
+            background-color: #af7ac5; /* Darker purple on hover */
         }
     </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>Welcome to my first web page!</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Item 1</td>
+                <td>Description of Item 1</td>
+                <td>$10.00</td>
+            </tr>
+            <tr>
+                <td>Item 2</td>
+                <td>Description of Item 2</td>
+                <td>$15.00</td>
+            </tr>
+            <tr>
+                <td>Item 3</td>
+                <td>Description of Item 3</td>
+                <td>$20.00</td>
+            </tr>
+            <tr>
+                <td>Item 4</td>
+                <td>Description of Item 4</td>
+                <td>$25.00</td>
+            </tr>
+        </tbody>
+    </table>
+
 </body>
 </html>
