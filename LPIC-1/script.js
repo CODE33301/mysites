@@ -2,7 +2,8 @@ const quiz = document.getElementById("quiz");
 const submitButton = document.getElementById("submit");
 const result = document.getElementById("result");
 
-let currentQuestionIndex = 0;
+let currentTopicIndex = 0;
+let currentSubtopicIndex = 0;
 let score = 0;
 let quizData = [];
 
@@ -16,13 +17,15 @@ fetch('quiz_data.json')
     .catch(error => console.error('Error loading quiz data:', error));
 
 function loadQuiz() {
-    const currentQuestion = quizData[currentQuestionIndex];
+    const currentTopic = quizData[currentTopicIndex];
+    const currentSubtopic = currentTopic.subtopics[currentSubtopicIndex];
+
     quiz.innerHTML = `
-        <div class="question">${currentQuestion.question}</div>
-        <label><input type="radio" name="answer" value="a"> ${currentQuestion.a}</label><br>
-        <label><input type="radio" name="answer" value="b"> ${currentQuestion.b}</label><br>
-        <label><input type="radio" name="answer" value="c"> ${currentQuestion.c}</label><br>
-        <label><input type="radio" name="answer" value="d"> ${currentQuestion.d}</label><br>
+        <div class="question">${currentSubtopic.question}</div>
+        <label><input type="radio" name="answer" value="a"> ${currentSubtopic.a}</label><br>
+        <label><input type="radio" name="answer" value="b"> ${currentSubtopic.b}</label><br>
+        <label><input type="radio" name="answer" value="c"> ${currentSubtopic.c}</label><br>
+        <label><input type="radio" name="answer" value="d"> ${currentSubtopic.d}</label><br>
     `;
 }
 
@@ -39,14 +42,22 @@ function getSelected() {
 submitButton.addEventListener("click", () => {
     const answer = getSelected();
     if (answer) {
-        if (answer === quizData[currentQuestionIndex].correct) {
+        if (answer === quizData[currentTopicIndex].subtopics[currentSubtopicIndex].correct) {
             score++;
         }
-        currentQuestionIndex++;
-        if (currentQuestionIndex < quizData.length) {
+        currentSubtopicIndex++;
+        
+        // Move to the next topic if all subtopics in the current topic are answered
+        if (currentSubtopicIndex >= quizData[currentTopicIndex].subtopics.length) {
+            currentTopicIndex++;
+            currentSubtopicIndex = 0; // Reset subtopic index for the new topic
+        }
+
+        // Check if there are more topics to display
+        if (currentTopicIndex < quizData.length) {
             loadQuiz();
         } else {
-            result.innerHTML = `You scored ${score} out of ${quizData.length}`;
+            result.innerHTML = `You scored ${score} out of ${quizData.length * 3}`; // Assuming 3 questions per topic
             quiz.style.display = "none";
             submitButton.style.display = "none";
         }
