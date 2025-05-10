@@ -1,118 +1,229 @@
 [
-    {
-        "topic": "SYSTEM ARCHITECTURE",
-        "subtopics": [
-            {
-                "question": "Q",
-                "a": "aaa",
-                "b": "bbb",
-                "c": "ccc",
-                "d": "ddd",
-                "correct": "b"
-            },
-            {
-                "question": "Q",
-                "a": "aaa",
-                "b": "bbb",
-                "c": "ccc",
-                "d": "ddd",
-                "correct": "c"
-            },
-            {
-                "question": "Q",
-                "a": "aaa",
-                "b": "bbb",
-                "c": "ccc",
-                "d": "ddd",
-                "correct": "c"
+  {
+    "topic": "SYSTEM ARCHITECTURE",
+    "subtopics": [
+      {
+        "subtopic": "Determine and configure hardware settings",
+        "question": {
+          "a": {
+            "question": "What are the main types of artificial intelligence?",
+            "answer": "The main types of artificial intelligence include narrow AI, which is designed for specific tasks, and general AI, which has the ability to understand and reason across a wide range of tasks."
+          }
+        }
+      },
+      {
+        "subtopic": "Boot the system",
+        "question": {
+          "a": {
+            "question": "What is blockchain technology?",
+            "answer": "Blockchain technology is a decentralized digital ledger that records transactions across many computers in a way that the registered transactions cannot be altered retroactively."
+          }
+        }
+      },
+      {
+        "subtopic": "Change runlevels / boot targets and shutdown or reboot system",
+        "question": {
+          "a": {
+            "question": "What are the most common types of cyber threats?",
+            "answer": "Common types of cyber threats include malware, phishing attacks, ransomware, and denial-of-service (DoS) attacks."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "topic": "LINUX INSTALLATION AND PACKAGE MANAGEMENT",
+    "subtopics": [
+      {
+        "subtopic": "Design hard disk layout",
+        "question": {
+          "a": {
+            "question": "What are the benefits of a balanced diet?",
+            "answer": "A balanced diet provides essential nutrients, supports overall health, helps maintain a healthy weight, and reduces the risk of chronic diseases."
+          }
+        }
+      },
+      {
+        "subtopic": "Install a boot manager",
+        "question": {
+          "a": {
+            "question": "What are the signs of mental health issues?",
+            "answer": "Signs may include persistent sadness, withdrawal from social activities, changes in appetite or sleep patterns, and difficulty concentrating."
+          }
+        }
+      },
+      {
+        "subtopic": "Manage shared libraries",
+        "question": {
+          "a": {
+            "question": "What are the recommended guidelines for physical activity?",
+            "answer": "Adults should aim for at least 150 minutes of moderate-intensity aerobic activity or 75 minutes of vigorous-intensity activity each week, along with muscle-strengthening activities on two or more days."
+          }
+        }
+      },
+      {
+        "subtopic": "Use Debian package management",
+        "question": {
+          "a": {
+            "question": "What are the recommended guidelines for physical activity?",
+            "answer": "Adults should aim for at least 150 minutes of moderate-intensity aerobic activity or 75 minutes of vigorous-intensity activity each week, along with muscle-strengthening activities on two or more days."
+          }
+        }
+      },
+      {
+        "subtopic": "Use RPM and YUM package management",
+        "question": {
+          "a": {
+            "question": "What are the recommended guidelines for physical activity?",
+            "answer": "Adults should aim for at least 150 minutes of moderate-intensity aerobic activity or 75 minutes of vigorous-intensity activity each week, along with muscle-strengthening activities on two or more days."
+          }
+        }
+      },
+      {
+        "subtopic": "Linux as a virtualization guest",
+        "question": {
+          "a": {
+            "question": "What are the recommended guidelines for physical activity?",
+            "answer": "Adults should aim for at least 150 minutes of moderate-intensity aerobic activity or 75 minutes of vigorous-intensity activity each week, along with muscle-strengthening activities on two or more days."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "topic": "GNU AND UNIX COMMANDS",
+    "subtopics": [
+      {
+        "subtopic": "Work on the command line",
+        "question": {
+          "a": {
+            "question": "What are the primary causes of climate change?",
+            "answer": "The primary causes of climate change include greenhouse gas emissions from burning fossil fuels, deforestation, and industrial processes."
+          }
+        }
+      },
+      {
+        "subtopic": "Process text streams using filters",
+        "question": {
+          "a": {
+            "question": "What does sustainability mean in the context of environmental science?",
+            "answer": "Sustainability refers to meeting the needs of the present without compromising the ability of future generations to meet their own needs, often focusing on environmental protection, social equity, and economic viability."
+          }
+        }
+      },
+      {
+        "subtopic": "Perform basic file management",
+        "question": {
+          "a": {
+            "question": "What are the different types of pollution?",
+            "answer": "The different types of pollution include air pollution, water pollution, soil pollution, and noise pollution."
+          }
+        }
+      },
+      {
+        "subtopic": "Use streams, pipes and redirects",
+        "question": {
+          "a": {
+            "question": "What are the different types of pollution?",
+            "answer": "The different types of pollution include air pollution, water pollution, soil pollution, and noise pollution."
+          }
+        }
+      },
+      {
+        "subtopic": "Create, monitor and kill processes",
+        "question": {
+          "a": {
+            "question": "What are the different types of pollution?",
+            "answer": "The different types of pollution include air pollution, water pollution, soil pollution, and noise pollution."
+          }
+        }
+      },
+      {
+        "subtopic": "Modify process execution priorities",
+        "question": {
+          "a": {
+            "question": "What are the different types of pollution?",
+            "answer": "The different types of pollution include air pollution, water pollution, soil pollution, and noise pollution."
+          }
+        }
+      },
+      {
+        "subtopic": "Search text files using regular expressions",
+        "question": {
+          "a": {
+            "question": "What are the different types of pollution?",
+            "answer": "The different types of pollution include air pollution, water pollution, soil pollution, and noise pollution."
+          }
+        }
+      },
+      {
+        "subtopic": "Basic file editing",
+        "question": {
+          "a": {
+            "question": "What are the different types of pollution?",
+            "answer": "The different types of pollution include air pollution, water pollution, soil pollution, and noise pollution."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "topic": "DEVICES, LINUX FILESYSTEMS, FILESYSTEM HIERARCHY STANDARD",
+    "subtopics": [
+      {
+        "subtopic": "Create partitions and filesystems",
+        "questions": {
+          "a": 
+          {
+            "question": "...",
+            "answer": "..."
+          }
+        }
+      },
+      {
+        "subtopic": "Maintain the integrity of filesystems",
+        "questions": {
+          "a": {
+            "question": "...",
+            "answer": "..."
+          }
+        }
+      },
+      {
+        "subtopic": "Control mounting and unmounting of filesystems",
+        "questions": {
+          "a": {
+            "question": "...",
+            "answer": "..."
+          }
+        }
+      },
+      {
+        "subtopic": "Manage file permissions and ownership",
+        "questions": {
+          "a": {
+            "question": "...",
+            "answer": "..."
+          }
+        }
+      },
+      {
+        "subtopic": "Create and change hard and symbolic links",
+        "questions": {
+          "a": {
+            "question": "...",
+            "answer": "..."
+          }
+        }
+      },
+      {
+        "subtopic": "Find system files and place files in the correct location",
+            "questions": {
+                "...": "...",
+                "...": "...",
+                "...": "..."
             }
-        ]
-    },
-    {
-        "topic": "LINUX INSTALLATION AND PACKAGE MANAGEMENT",
-        "subtopics": [
-            {
-                "question": "Q",
-                "a": "aaa",
-                "b": "bbb",
-                "c": "ccc",
-                "d": "ddd",
-                "correct": "a"
-            },
-            {
-                "question": "Q",
-                "a": "To store data in a structured format.",
-                "b": "To analyze data using statistical methods.",
-                "c": "To represent data graphically to identify patterns and insights.",
-                "d": "To clean and preprocess data.",
-                "correct": "c"
-            },
-            {
-                "question": "Q",
-                "a": "aaa",
-                "b": "bbb",
-                "c": "ccc",
-                "d": "ddd",
-                "correct": "b"
-            }
-        ]
-    },
-    {
-        "topic": "GNU AND UNIX COMMANDS",
-        "subtopics": [
-            {
-                "question": "Q",
-                "a": "aaa",
-                "b": "bbb",
-                "c": "ccc",
-                "d": "ddd",
-                "correct": "b"
-            },
-            {
-                "question": "Q",
-                "a": "aaa",
-                "b": "bbb",
-                "c": "ccc",
-                "d": "ddd",
-                "correct": "a"
-            },
-            {
-                "question": "Q",
-                "a": "aaa",
-                "b": "bbb",
-                "c": "ccc",
-                "d": "ddd",
-                "correct": "b"
-            }
-        ]
-    },
-    {
-        "topic": "DEVICES, LINUX FILESYSTEMS, FILESYSTEM HIERARCHY STANDARD",
-        "subtopics": [
-            {
-                "question": "Q",
-                "a": "aaa",
-                "b": "bbb",
-                "c": "ccc",
-                "d": "ddd",
-                "correct": "b"
-            },
-            {
-                "question": "Q",
-                "a": "aaa",
-                "b": "bbb",
-                "c": "ccc",
-                "d": "ddd",
-                "correct": "a"
-            },
-            {
-                "question": "Q",
-                "a": "aaa",
-                "b": "bbb",
-                "c": "ccc",
-                "d": "ddd",
-                "correct": "b"
-            }
-        ]
-    }
+      }
+    ]
+  }
 ]
