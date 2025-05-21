@@ -1,87 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resizable Fixed Iframe</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden; /* Prevent scrollbars */
-        }
-        #fixed-iframe {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 200px; /* Initial height for the iframe */
-            border: 2px solid #000;
-            z-index: 1000; /* Ensure it stays on top */
-        }
-        #resize-handle {
-            position: fixed;
-            left: 0;
-            right: 0;
-            height: 10px; /* Height of the resize handle */
-            background-color: #ccc;
-            cursor: ns-resize; /* Cursor style for resizing */
-            z-index: 1001; /* Ensure it stays above the iframe */
-        }
-        #content {
-            margin-top: 220px; /* Space for the initial iframe height */
-            padding: 20px;
-            transition: margin-top 0.2s; /* Smooth transition for margin change */
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <!-- viewport meta tag for responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resizable Fixed Iframe with Responsive Content</title>
+  <style>
+    html, body {
+      padding: 0;
+      margin: 0;
+      /* allow scrolling when content overflows */
+      overflow-x: hidden;
+    }
+
+    /* Fixed container for the iframe and its handle */
+    #iframe-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    /* The fixed iframe itself */
+    #fixed-iframe {
+      display: block;
+      width: 100%;
+      height: 200px; /* initial height */
+      border: none;
+      box-sizing: border-box;
+      border-bottom: 2px solid #000;
+    }
+
+    /* The resize handle below the iframe */
+    #resize-handle {
+      width: 100%;
+      height: 12px;
+      background-color: #ccc;
+      cursor: ns-resize;
+      /* A slight border to visually separate it */
+      border-bottom: 2px solid #000;
+    }
+
+    /* The content container that will be pushed down */
+    #content {
+      position: relative;
+      padding: 20px;
+      /* Start margin equals the iframe container height */
+      margin-top: 212px; /* iframe height (200) + handle (12) */
+    }
+  </style>
 </head>
 <body>
 
-<iframe id="fixed-iframe" src="https://www.example.com"></iframe>
-<div id="resize-handle"></div>
+  <div id="iframe-container">
+    <iframe id="fixed-iframe" src="https://www.example.com"></iframe>
+    <div id="resize-handle"></div>
+  </div>
 
-<div id="content">
+  <div id="content">
     <h1>Welcome to My Page</h1>
-    <p>This is some content below the fixed iframe. Scroll down to see more.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <p>More content here...</p>
-    <p>More content here...</p>
-    <p>More content here...</p>
-    <p>More content here...</p>
-    <p>More content here...</p>
-    <p>More content here...</p>
-    <p>More content here...</p>
-</div>
+    <p>This content will move down as you resize the frame above.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo.
+      Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+    </p>
+    <p>
+      Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+    </p>
+    <p>
+      Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.
+    </p>
+    <p>
+      Additional sample content to allow scrolling...
+    </p>
+    <p>
+      More content here, you can add as much as you need.
+    </p>
+  </div>
 
-<script>
-    const iframe = document.getElementById('fixed-iframe');
-    const resizeHandle = document.getElementById('resize-handle');
-    const content = document.getElementById('content');
+  <script>
+    (function(){
+      const iframe = document.getElementById('fixed-iframe');
+      const resizeHandle = document.getElementById('resize-handle');
+      const content = document.getElementById('content');
 
-    let isResizing = false;
+      let isResizing = false;
 
-    // Mouse down event to start resizing
-    resizeHandle.addEventListener('mousedown', (event) => {
+      // Preferred minimum height for iframe in pixels
+      const minHeight = 100;
+
+      // pointerdown event to start resizing (works for both mouse and touch)
+      resizeHandle.addEventListener('pointerdown', (e) => {
+        // Prevent default behavior to avoid text selection
+        e.preventDefault();
         isResizing = true;
-    });
+        // Set pointer capture for the resize handle for smooth dragging
+        resizeHandle.setPointerCapture(e.pointerId);
+      });
 
-    // Mouse move event to resize the iframe
-    document.addEventListener('mousemove', (event) => {
-        if (isResizing) {
-            const newHeight = event.clientY; // Get the new height based on mouse position
-            if (newHeight > 100) { // Minimum height
-                iframe.style.height = newHeight + 'px';
-                resizeHandle.style.top = newHeight + 'px'; // Move the resize handle
-                content.style.marginTop = (newHeight + 20) + 'px'; // Adjust content margin
-            }
+      // pointermove event continues resizing
+      window.addEventListener('pointermove', (e) => {
+        if (!isResizing) return;
+        let newHeight = e.clientY;
+
+        // Enforce minimum height
+        if (newHeight < minHeight) {
+          newHeight = minHeight;
         }
-    });
 
-    // Mouse up event to stop resizing
-    document.addEventListener('mouseup', () => {
-        isResizing = false;
-    });
-</script>
+        // Update iframe height
+        iframe.style.height = newHeight + 'px';
 
+        // Update the position of the resize handle and the margin for the content container.
+        // In our layout, the handle remains directly below the iframe
+        // and the content margin-top should equal iframe height + handle height.
+        content.style.marginTop = (newHeight + resizeHandle.offsetHeight) + 'px';
+      });
+
+      // pointerup event to end resizing
+      window.addEventListener('pointerup', (e) => {
+        if (isResizing) {
+          isResizing = false;
+          resizeHandle.releasePointerCapture(e.pointerId);
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
