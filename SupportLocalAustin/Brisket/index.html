@@ -5,51 +5,8 @@
   <!-- viewport meta tag for responsiveness -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resizable Fixed Iframe with Responsive Content</title>
-  <style>
-    html, body {
-      padding: 0;
-      margin: 0;
-      /* allow scrolling when content overflows */
-      overflow-x: hidden;
-    }
-
-    /* Fixed container for the iframe and its handle */
-    #iframe-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-    }
-
-    /* The fixed iframe itself */
-    #fixed-iframe {
-      display: block;
-      width: 100%;
-      height: 200px; /* initial height */
-      border: none;
-      box-sizing: border-box;
-      border-bottom: 2px solid #000;
-    }
-
-    /* The resize handle below the iframe */
-    #resize-handle {
-      width: 100%;
-      height: 12px;
-      background-color: #ccc;
-      cursor: ns-resize;
-      /* A slight border to visually separate it */
-      border-bottom: 2px solid #000;
-    }
-
-    /* The content container that will be pushed down */
-    #content {
-      position: relative;
-      padding: 20px;
-      /* Start margin equals the iframe container height */
-      margin-top: 212px; /* iframe height (200) + handle (12) */
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
 </head>
 <body>
 
@@ -78,54 +35,5 @@
       More content here, you can add as much as you need.
     </p>
   </div>
-
-  <script>
-    (function(){
-      const iframe = document.getElementById('fixed-iframe');
-      const resizeHandle = document.getElementById('resize-handle');
-      const content = document.getElementById('content');
-
-      let isResizing = false;
-
-      // Preferred minimum height for iframe in pixels
-      const minHeight = 100;
-
-      // pointerdown event to start resizing (works for both mouse and touch)
-      resizeHandle.addEventListener('pointerdown', (e) => {
-        // Prevent default behavior to avoid text selection
-        e.preventDefault();
-        isResizing = true;
-        // Set pointer capture for the resize handle for smooth dragging
-        resizeHandle.setPointerCapture(e.pointerId);
-      });
-
-      // pointermove event continues resizing
-      window.addEventListener('pointermove', (e) => {
-        if (!isResizing) return;
-        let newHeight = e.clientY;
-
-        // Enforce minimum height
-        if (newHeight < minHeight) {
-          newHeight = minHeight;
-        }
-
-        // Update iframe height
-        iframe.style.height = newHeight + 'px';
-
-        // Update the position of the resize handle and the margin for the content container.
-        // In our layout, the handle remains directly below the iframe
-        // and the content margin-top should equal iframe height + handle height.
-        content.style.marginTop = (newHeight + resizeHandle.offsetHeight) + 'px';
-      });
-
-      // pointerup event to end resizing
-      window.addEventListener('pointerup', (e) => {
-        if (isResizing) {
-          isResizing = false;
-          resizeHandle.releasePointerCapture(e.pointerId);
-        }
-      });
-    })();
-  </script>
 </body>
 </html>
