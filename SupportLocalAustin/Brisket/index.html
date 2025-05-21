@@ -3,9 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dynamic Iframe Movement</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden; /* Prevent scrollbars */
+        }
+        #dynamic-iframe {
+            position: fixed;
+            width: 80%;
+            height: 80%;
+            border: 2px solid #000;
+            transition: transform 0.2s; /* Smooth transition */
+        }
+    </style>
 </head>
 <body>
-    
+
+<iframe id="dynamic-iframe" src="https://www.example.com"></iframe>
+
+<script>
+    const iframe = document.getElementById('dynamic-iframe');
+
+    // Function to move the iframe based on mouse position
+    document.addEventListener('mousemove', (event) => {
+        const x = event.clientX;
+        const y = event.clientY;
+
+        // Calculate new position
+        const offsetX = -iframe.clientWidth / 2;
+        const offsetY = -iframe.clientHeight / 2;
+
+        // Set the new position
+        iframe.style.transform = `translate(${x + offsetX}px, ${y + offsetY}px)`;
+    });
+</script>
+
 </body>
 </html>
