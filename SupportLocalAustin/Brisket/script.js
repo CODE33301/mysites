@@ -44,3 +44,29 @@
     }
   });
 })();
+
+///////////////////////////////////////////////////////////////////////////
+
+// Function to fetch JSON data and populate the table
+async function fetchLocationData() {
+    try {
+        const response = await fetch('data.json');
+        const locations = await response.json();
+        const tableBody = document.querySelector('#locationTable tbody');
+
+        locations.forEach(location => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${location.name}</td>
+                <td>${location.address}</td>
+                <td>${location.homePage}</td>
+            `;
+            tableBody.appendChild(row);
+        });
+    } catch (error) {
+        console.error('Error fetching location data:', error);
+    }
+}
+
+// Call the function to fetch data and populate the table
+fetchLocationData();

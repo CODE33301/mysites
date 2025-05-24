@@ -1,0 +1,20 @@
+[
+    {
+        "name":        "Black's BBQ Austin",
+        "address":     "3110 Guadalupe St Austin, TX 78705",
+        "homePage":    "https://www.blacksbbq.com",
+        "coordinates": "30.298492237853015, -97.74126715297808"
+    },
+    {
+        "name":        "other, ...",
+        "address":     "other, ...",
+        "homePage":    "other, ...",
+        "coordinates": ""
+    },
+    {
+        "name":        "other, ...",
+        "address":     "other, ...",
+        "homePage":    "other, ...",
+        "coordinates": ""
+    }
+]
